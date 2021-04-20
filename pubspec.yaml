@@ -2,7 +2,7 @@ name: flutter_number_animation
 description: With this package you can display numbers or any other text more nicely
 version: 0.0.1
 author: 'Idan Ben Shimon'
-homepage: ''
+homepage: 'https://github.com/studioidan/flutter_number_animation'
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
