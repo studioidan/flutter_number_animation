@@ -1,5 +1,40 @@
 # flutter_number_animation
 
+>With this package you can display numbers or any other text more nicely
+
+
+## Preview
+
+<img src="https://github.com/studioidan/FlutterAnimatedLoaders/blob/master/art/video1.gif" width="340px" />
+
+# How to use
+ 1. Add this to your package's pubspec.yaml file:
+
+````dart
+dependencies:
+  flutter_number_animation: ^0.0.1
+  ````
+ 
+ 2. Select your favorite loader and add it as a widget!
+ you can customise it however you like!
+ 
+ ````dart
+ FlutterLoaders.pulse(
+              Icon(
+                Icons.android,
+                color: Colors.green,
+                size: 40.0,
+              ),
+              Colors.green)
+  ````
+ 
+
+## Getting Started
+
+For help getting started with Flutter, view our online [documentation](https://flutter.io/).
+
+For help on editing package code, view the [documentation](https://flutter.io/developing-packages/).
+
 With this package you can display numbers or any other text more nicely  
 
 ## Getting Started
