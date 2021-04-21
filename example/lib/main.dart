@@ -43,7 +43,7 @@ class _HomeState extends State<Home> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              NumberAnimation('123456789',
+              NumberAnimation(value1,
                   textStyle: TextStyle(fontSize: 60, color: Colors.deepOrange), timeBetweenSlides: Duration(milliseconds: 400)),
               SizedBox(height: 100),
               MaterialButton(
