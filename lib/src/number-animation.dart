@@ -19,8 +19,7 @@ class NumberAnimation extends StatefulWidget {
 class NumberAnimationState extends State<NumberAnimation> {
   String value;
 
-  List<GlobalKey<DigitWidgetState>> keys = [];
-  List<DigitWidget> digitWidgets = [];
+  List<Widget> items = [];
   List<String> digits = [];
 
   @override
@@ -36,14 +35,16 @@ class NumberAnimationState extends State<NumberAnimation> {
   @override
   Widget build(BuildContext context) {
     bool isNewValue = value != widget.value;
+    print('is new value = $isNewValue');
 
-    // print('*****   Number Animation  build ${isNewValue ? ' Value changed from $value to ${widget.value}' : ''}  (value is: ${widget.value})*****');
-    value = widget.value;
-
-    List<Widget> items = [];
-    for (int i = 0; i < value.runes.length; ++i) {
-      String char = String.fromCharCode(value.runes.elementAt(i));
-      items.add(DigitWidget(char, 200 * i, textStyle: widget.textStyle));
+    // update widget list only if value has changed
+    if (isNewValue) {
+      value = widget.value;
+      items = [];
+      for (int i = 0; i < value.runes.length; ++i) {
+        String char = String.fromCharCode(value.runes.elementAt(i));
+        items.add(DigitWidget(char, widget.timeBetweenSlides.inMilliseconds * i, textStyle: widget.textStyle));
+      }
     }
 
     return Directionality(
@@ -54,5 +55,4 @@ class NumberAnimationState extends State<NumberAnimation> {
       ),
     );
   }
-
 }

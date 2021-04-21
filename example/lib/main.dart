@@ -53,6 +53,13 @@ class _HomeState extends State<Home> {
                     setState(() {
                       value = Random().nextInt(1000000).toString();
                     });
+                  }),
+              SizedBox(height: 30),
+              MaterialButton(
+                  child: Text('Test', style: TextStyle(color: Colors.white)),
+                  color: Colors.deepPurple,
+                  onPressed: () {
+                    setState(() {});
                   })
             ],
           ),
