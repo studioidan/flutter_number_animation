@@ -29,38 +29,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  // GlobalKey<NumberAnimationState> key1 = GlobalKey();
-  // GlobalKey<NumberAnimationState> key2 = GlobalKey();
-
-  // GlobalKey<NumberAnimationState> key3 = GlobalKey();
-
-  var words = ['coding', 'is', 'fun!'];
-  int wordPos = 0;
-
   String value1 = '1';
-  String value2 = '';
-
-  @override
-  void initState() {
-    super.initState();
-
-    /* Timer.periodic(Duration(seconds: 3), (timer) {
-      key1.currentState.setValue(Random().nextInt(100000).toString());
-    });
-
-    Timer.periodic(Duration(seconds: 1), (timer) {
-      String minute = DateTime.now().minute.toString().padLeft(2, '0');
-      String second = DateTime.now().second.toString().padLeft(2, '0');
-      key2.currentState.setValue('$minute:$second');
-    });*/
-
-    Timer.periodic(Duration(seconds: 2), (timer) {
-     setState(() {
-       wordPos++;
-
-     });
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -74,27 +43,17 @@ class _HomeState extends State<Home> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // NumberAnimation('123456789'),
-              // SizedBox(height: 100),
-              NumberAnimation(words[wordPos % words.length],
-                  animateSameValue: false,
-                  textStyle: TextStyle(fontSize: 60, color: Colors.deepOrange),
-                  timeBetweenSlides: Duration(milliseconds: 0)),
+              NumberAnimation('123456789',
+                  textStyle: TextStyle(fontSize: 60, color: Colors.deepOrange), timeBetweenSlides: Duration(milliseconds: 400)),
               SizedBox(height: 100),
-
-             /* MaterialButton(
-                  child: Text('Randomize number',style: TextStyle(color: Colors.white)),
+              MaterialButton(
+                  child: Text('Randomize number', style: TextStyle(color: Colors.white)),
                   color: Colors.deepPurple,
                   onPressed: () {
                     setState(() {
                       value1 = ((Random().nextInt(1000000) + 0)).toString();
-
-                      String minute = DateTime.now().minute.toString().padLeft(2, '0');
-                      String second = DateTime.now().second.toString().padLeft(2, '0');
-                      value2 = '$minute:$second';
-                      wordPos++;
                     });
-                  })*/
+                  })
             ],
           ),
         )));
