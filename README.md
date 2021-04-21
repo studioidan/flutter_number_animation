@@ -27,9 +27,9 @@ dependencies:
  NumberAnimation('123456789',
  textStyle: TextStyle(fontSize: 60, color: Colors.red),
  timeBetweenSlides: Duration(milliseconds: 800)
-),
-```
- 
+)
+  ````
+
 
 ## Getting Started
 
