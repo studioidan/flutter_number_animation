@@ -16,7 +16,7 @@
 
 ````dart
 dependencies:
-  flutter_number_animation: ^0.0.2
+  flutter_number_animation: ^0.0.4
   ````
  
  2. Add NumberAnimation Widget wherever you need!
