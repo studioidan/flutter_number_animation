@@ -5,7 +5,7 @@
 
 ## Preview
 
-<img src="https://github.com/studioidan/FlutterAnimatedLoaders/blob/master/art/video1.gif" width="340px" />
+<img src="https://github.com/studioidan/flutter_number_animation/blob/master/art/video1.gif" width="340px" />
 
 # How to use
  1. Add this to your package's pubspec.yaml file:
