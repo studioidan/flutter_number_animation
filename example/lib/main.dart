@@ -52,11 +52,14 @@ class _HomeState extends State<Home> {
       String minute = DateTime.now().minute.toString().padLeft(2, '0');
       String second = DateTime.now().second.toString().padLeft(2, '0');
       key2.currentState.setValue('$minute:$second');
-    });
-
-    Timer.periodic(Duration(seconds: 3), (timer) {
-      key3.currentState.setValue(words[(++wordPos) % words.length]);
     });*/
+
+    Timer.periodic(Duration(seconds: 2), (timer) {
+     setState(() {
+       wordPos++;
+
+     });
+    });
   }
 
   @override
@@ -71,17 +74,15 @@ class _HomeState extends State<Home> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              NumberAnimation('123456789'),
-              SizedBox(height: 100),
-              /*NumberAnimation(words[wordPos % words.length],
+              // NumberAnimation('123456789'),
+              // SizedBox(height: 100),
+              NumberAnimation(words[wordPos % words.length],
                   animateSameValue: false,
-                  textStyle: TextStyle(fontSize: 60, color: Colors.red),
+                  textStyle: TextStyle(fontSize: 60, color: Colors.deepOrange),
                   timeBetweenSlides: Duration(milliseconds: 0)),
               SizedBox(height: 100),
-              NumberAnimation(value2,
-                  textStyle: TextStyle(fontSize: 60, color: Colors.green), timeBetweenSlides: Duration(milliseconds: 200)),
-              SizedBox(height: 100),*/
-              MaterialButton(
+
+             /* MaterialButton(
                   child: Text('Randomize number',style: TextStyle(color: Colors.white)),
                   color: Colors.deepPurple,
                   onPressed: () {
@@ -93,7 +94,7 @@ class _HomeState extends State<Home> {
                       value2 = '$minute:$second';
                       wordPos++;
                     });
-                  })
+                  })*/
             ],
           ),
         )));
