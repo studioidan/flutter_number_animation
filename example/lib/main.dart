@@ -29,7 +29,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  String value1 = '1';
+  String value = '1000';
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +43,7 @@ class _HomeState extends State<Home> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              NumberAnimation(value1,
+              NumberAnimation(value,
                   textStyle: TextStyle(fontSize: 60, color: Colors.deepOrange), timeBetweenSlides: Duration(milliseconds: 400)),
               SizedBox(height: 100),
               MaterialButton(
@@ -51,7 +51,7 @@ class _HomeState extends State<Home> {
                   color: Colors.deepPurple,
                   onPressed: () {
                     setState(() {
-                      value1 = ((Random().nextInt(1000000) + 0)).toString();
+                      value = Random().nextInt(1000000).toString();
                     });
                   })
             ],
