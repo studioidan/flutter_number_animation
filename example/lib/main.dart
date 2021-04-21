@@ -71,10 +71,7 @@ class _HomeState extends State<Home> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              NumberAnimation(value1,
-                  animateSameValue: false,
-                  textStyle: TextStyle(fontSize: 60, color: Colors.deepPurple),
-                  timeBetweenSlides: Duration(milliseconds: 200)),
+              NumberAnimation('123456789'),
               SizedBox(height: 100),
               /*NumberAnimation(words[wordPos % words.length],
                   animateSameValue: false,

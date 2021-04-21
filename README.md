@@ -15,18 +15,20 @@ dependencies:
   flutter_number_animation: ^0.0.1
   ````
  
- 2. Select your favorite loader and add it as a widget!
- you can customise it however you like!
+ 2. Add NumberAnimation Widget wherever you need!
  
  ````dart
- FlutterLoaders.pulse(
-              Icon(
-                Icons.android,
-                color: Colors.green,
-                size: 40.0,
-              ),
-              Colors.green)
+ NumberAnimation('123456789'),
   ````
+
+3. You can also set the TextStyle and time between each slides
+
+ ````dart
+ NumberAnimation('123456789',
+ textStyle: TextStyle(fontSize: 60, color: Colors.red),
+ timeBetweenSlides: Duration(milliseconds: 800)
+),
+```
  
 
 ## Getting Started
