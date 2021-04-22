@@ -25,7 +25,7 @@ class NumberAnimationState extends State<NumberAnimation> {
   @override
   void initState() {
     super.initState();
-
+    if (widget.timeBetweenSlides == null) widget.timeBetweenSlides = Duration(milliseconds: 400);
     print('*****    Number Animation initState  *****');
     if (widget.textStyle == null) {
       widget.textStyle = TextStyle(fontSize: 25);
